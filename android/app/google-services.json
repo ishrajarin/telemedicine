@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1045590623502",
+    "project_id": "telemedicine-92700",
+    "storage_bucket": "telemedicine-92700.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045590623502:android:b38196d6d680e244c6435f",
+        "android_client_info": {
+          "package_name": "com.israt.tele_medicine"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc4Ow4Ltto6PZCfBzfZMvKdrRM4oZSuFw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,53 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "com.google.gms.google-services" // Firebase services
+    id "dev.flutter.flutter-gradle-plugin" // Must be applied after the Android and Kotlin plugins
+}
+
+android {
+    namespace = "com.israt.tele_medicine"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8" // Ensure compatibility with Java 8
+    }
+
+    defaultConfig {
+        applicationId = "com.israt.tele_medicine" // Unique app ID
+        minSdk = flutter.minSdkVersion // Set by Flutter
+        targetSdk = flutter.targetSdkVersion // Set by Flutter
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            // TODO: Replace with your release signing config when building for production.
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.." // Path to your Flutter module
+}
+
+dependencies {
+    // Import the Firebase BoM (Bill of Materials) for version alignment
+    implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
+
+    // Firebase dependencies you might need (add only the ones you're using):
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
+    implementation("com.google.firebase:firebase-messaging")
+
+    // Additional dependencies if required
+}
